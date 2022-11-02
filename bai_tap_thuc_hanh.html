@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập thực hành</title>
+</head>
+<body>
+<!--<canvas id="myCanvas" width="1000" height="500"></canvas>-->
+<script>
+  // Bài 1: Cho danh sách các điểm thi ở trong 1 mảng.Hãy viết hàm findAvg() với đầu vào là 1 mảng điểm và đầu ra là
+  //        điểm trung bình của danh sách điểm thi
+ // function findAvg(arr) {
+ //    let total = 0;
+ //    for (i=0;i<arr.length;i++) {
+ //        total = total + arr[i];
+ //    }
+ //    return total/arr.length;
+ // }
+ //  let test = findAvg([1,2,3])
+ //  document.write(test)
+
+  // Bài 2: Viết hàm insertNumberToArray() nhận vào 1 mảng các số nguyên, một số nguyên x, và 1 số nguyên vị trí index.
+  //        Hàm trả về mảng ban đầu nếu vị trí index có giá trị nhỏ hơn 0 hoặc lớn hơn chiều dài mảng. Nếu không thì trả
+  //        về mảng mới đã được thêm số x vào vị trí index
+  // function insertNumbertoArray(array,number,index) {
+  //     let newArray = [];
+  //     if (index >0 && index < array.length) {
+  //       for (let i=0;i<index;i++) {
+  //           newArray.push(array[i])
+  //       }
+  //       newArray[index] = number;
+  //       for (let i=index;i<array.length;i++) {
+  //           newArray.push(array[i]);
+  //       }
+  //       return newArray
+  //     }
+  // }
+  // console.log(insertNumbertoArray([1,2,3,4,5],10,2));
+
+
+  // Đề lớp Yến
+
+ // Bài 1:Cho danh sách các điểm thi ở trong 1 mảng. Hãy viết hàm tìm được điểm thi cao thứ 3 với đầu vào là 1 mảng điểm
+ //  (Không dùng hàm có sẵn để sắp xếp)
+ //  function find3rdScore (arr) {
+ //      for (let i=0;i<arr.length-1;i++) {
+ //        for (let j=i+1;j<arr.length;j++) {
+ //            if (arr[i]>arr[j]) {
+ //                let tmp = arr[j];
+ //                arr[j] = arr[i];
+ //                arr[i] = tmp;
+ //            }
+ //        }
+ //      }
+ //      for (let k=0;k<arr.length;k++) {
+ //          document.write(arr[k] + ', ');
+ //      }
+ //      document.write('<br>')
+ //      document.write('Điểm thi cao thứ 3: ' + arr[arr.length-3])
+ //  }
+ //  let arr1= [10,25,18,19,30]
+ //  find3rdScore(arr1)
+
+// Bài 2: Viết hàm tryRemoveFromArray () nhận vào 1 mảng và 1 số nguyên index, trả về mảng ban đầu đã được loại bỏ phần tử tại
+// vị trí index nếu index hợp lệ. Nếu index không hợp lệ, trả về mảng ban đầu
+//   function tryRemoveFromArray (arr,number) {
+//       if (number<0 || number> arr.length) {
+//           return arr
+//       }
+//       else if (number>0 && number<arr.length) {
+//             arr.splice(number,1)
+//       }
+//       return arr
+//   }
+//
+//   let arr1 = [10,25,18,19,30]
+//   let value = tryRemoveFromArray(arr1,3)
+//   document.write(value)
+
+  // Bài 3:Viết hàm kiểm tra xem 1 chuỗi có nằm trong chuỗi còn lại không. Với đầu vào là 2 chuỗi (str1,str2)
+  //       trong đó sẽ kiểm tra str1 có nằm trong str2 không, nếu có trả về true và ngược lại false
+  // function isSubstring(s1, s2)
+  // {
+  //     var M = s1.length;
+  //     var N = s2.length;
+  //
+  //     for (var i = 0; i <= N - M; i++) {
+  //         var j;
+  //         for (j = 0; j < M; j++)
+  //             if (s2[i + j] != s1[j])
+  //                 break;
+  //         if (j == M)
+  //             return i;
+  //     }
+  //     return -1;
+  // }
+  // var s1 = "ball";
+  // var s2 = "footballclub";
+  // var res = isSubstring(s1, s2);
+  // if (res == -1)
+  //     document.write( "Not present");
+  // else
+  //     document.write( "Present at index " + res);
+
+  // Bài 4: Hãy viết 1 chương trình biểu diễn HCN với mô tả của lớp HCN như sau:
+  // Rectangle: Tên lớp
+  // x: tọa độ x
+  // y: tọa độ y
+  // width: chiều rộng
+  // height: chiều cao
+  // color: màu sắc
+  // render(canvas) hiển thị HCN trên 1 canvas
+  // Hãy thực hiện các thao tác theo kịch bản sau:
+  // Tạo 1 HCN có tọa độ 10,10 và kích thước rộng 200, cao 100, màu #000000
+  // Hiển thị HCN trên 1 canvas bằng cách sử dụng phương thức render
+
+
+  // class Rectangle {
+  //     x;
+  //     y;
+  //     width;
+  //     height;
+  //     constructor(x,y,width,height) {
+  //         this.x = x;
+  //         this.y = y;
+  //         this.width = width;
+  //         this.height = height;
+  //     }
+  //     render(){
+  //         let c = document.getElementById('myCanvas');
+  //         let ctx = c.getContext('2d');
+  //         ctx.rect(this.x,this.y,this.width, this.height);
+  //         ctx.fillStyle = '#fa4b2a';
+  //         ctx.fill()
+  //     }
+  // }
+  //
+  // let rectangle = new Rectangle(50,50,200,100)
+  // rectangle.render()
+
+
+  // Đề lớp Duy
+  // Bài 1,2,4: Tương tự đề lớp Yến
+
+  // Bài 3: Viết hàm sumOfListFibonacy() nhận vào một số nguyên x , hàm trả về giá trị là tổng các số fibonacy từ 0 cho tới x.
+  // function sumOfListFibonacy(x) {
+  //     let arr = [0,1]
+  //     let a = 0;
+  //     let b = 1;
+  //     let temp;
+  //     let sum = 0;
+  //     for (let i = 2;; i++) {
+  //         if (a+b > x) break;
+  //         arr.push(a+b);
+  //         temp = a;
+  //         a = b;
+  //         b = temp+b;
+  //     }
+  //     for (let i = 0;i<arr.length; i++){
+  //         sum+= arr[i]
+  //     }
+  //     return sum;
+  // }
+  // console.log(sumOfListFibonacy(10))
+
+</script>
+</body>
+</html>
